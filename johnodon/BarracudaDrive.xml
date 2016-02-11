@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>BarracudaDrive</Name>
+  <Description>BarracudaDrive transforms your computer (or device) into a powerful and secure online storage system, letting you access and share files from any connected computer or device in the world.&#13;
+[br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#13;
+[b]/home/nobody[/b] : Folder where BarracudaDrive is installed and configured [br]&#13;
+[b]80[/b] : The web-interface.</Description>
+  <Registry>https://hub.docker.com/r/johnodon/barracudadrive/</Registry>
+  <Repository>johnodon/barracudadrive</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/BarracudaDrive</HostDir>
+      <ContainerDir>/home/nobody</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version></Version>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <Banner>http://i.imgur.com/HDsmQAM.png</Banner>
+  <Icon>http://i.imgur.com/xqhiQe8.png</Icon>
+  <ExtraParams></ExtraParams>
+  <Overview>BarracudaDrive transforms your computer (or device) into a powerful and secure online storage system, letting you access and share files from any connected computer or device in the world.</Overview>
+  <Beta>False</Beta>
+  <Category>Network:Web</Category>
+  <Date>2016-02-10</Date> 
+  <Support>http://lime-technology.com/forum/index.php?topic=46461.0</Support>
+</Container>
