@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>Gourmet</Name>
+  <Description>Gourmet Recipe Manager is a recipe-organizer available for Windows, Linux, and other Unix systems (including Mac OS X, i.e. via the Fink or MacPorts package managers) that allows you to collect, search, organize, and browse your recipes. Gourmet can also generate shopping lists and calculate nutritional information. It imports Mealmaster, MasterCook and KRecipe files and exports PDFs, webpages and other formats. Gourmet is free software and uses Python, GTK+ and SQLAlchemy.&#13;
+[br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#13;
+[b]/config[/b] : Folder where Gourmet's configuration is stored[br]&#13;
+[b]8080[/b] : xRDP web-interface.[br]
+[b]3389[/b] : xRDP client interface</Description>
+  <Registry>https://hub.docker.com/r/johnodon/gourmet/</Registry>
+  <Repository>johnodon/gourmet</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+	  <Port>
+        <HostPort>3389</HostPort>
+        <ContainerPort>3389</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/Gourmet</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version></Version>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <Banner>http://i.imgur.com/AnXlbnl.png</Banner>
+  <Icon>http://i.imgur.com/n7LhKas.png</Icon>
+  <ExtraParams></ExtraParams>
+  <Overview>Gourmet Recipe Manager is a recipe-organizer available for Windows, Linux, and other Unix systems (including Mac OS X, i.e. via the Fink or MacPorts package managers) that allows you to collect, search, organize, and browse your recipes.</Overview>
+  <Beta>False</Beta>
+  <Category>Tools</Category>
+  <Date>2016-02-10</Date> 
+  <Support>http://lime-technology.com/forum/index.php?topic=46473.0</Support>
+</Container>
